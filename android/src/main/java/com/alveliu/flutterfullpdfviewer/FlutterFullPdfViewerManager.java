@@ -1,6 +1,7 @@
 package com.alveliu.flutterfullpdfviewer;
 
 import android.app.Activity;
+import android.graphics.Color;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
@@ -27,10 +28,13 @@ class FlutterFullPdfViewerManager {
 
     void openPDF(String path) {
         File file = new File(path);
+        pdfView.setBackgroundColor(Color.LTGRAY);
         pdfView.fromFile(file)
                 .enableSwipe(true)
                 .swipeHorizontal(false)
+                .spacing(10)
                 .enableDoubletap(true)
+                .pageSnap(false)
                 .defaultPage(0)
                 .load();
     }

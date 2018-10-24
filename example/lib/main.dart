@@ -9,6 +9,7 @@ import 'package:path_provider/path_provider.dart';
 void main() {
   runApp(MaterialApp(
     title: 'Plugin example app',
+    theme: ThemeData.dark(),
     home: MyApp(),
   ));
 }
